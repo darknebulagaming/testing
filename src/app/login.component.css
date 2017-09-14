@@ -1,0 +1,41 @@
+.floor{
+  width:100%;
+  height:100%;
+  background: #c94b4b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4b134f, #c94b4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  position:absolute;
+}
+.desk{
+  position:relative;
+  top:10vh;
+  width: 60vw;
+  height: 80vh;
+  margin:auto;
+  background-color: blue;
+}
+
+.left{
+  float: left;
+  padding:0 1% 0 1%;
+width:48%;
+height:100%;
+background: #00d2ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.right{
+  padding:0 1% 0 1%;
+width:48%;
+float: right;
+  height:100%;
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color:white;  
+  
+}
+

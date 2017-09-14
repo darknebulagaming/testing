@@ -1,0 +1,21 @@
+<div class='floor' (mousemove)='mouseMove($event)'>
+<div class='desk' [ngStyle]="shadowStyle">
+    <div class='left'>
+        <p>Hello</p></div>
+    <div class='right'>
+        <p>login here</p></div>
+</div>
+</div>
+
+<script>
+  var cursorX;
+var cursorY;
+document.onmousemove = function(e){
+    cursorX = e.pageX;
+    cursorY = e.pageY;
+}
+setInterval(checkCursor, 1000);
+function checkCursor(){
+    alert("Cursor at: " + cursorX + ", " + cursorY);
+}
+</script>
