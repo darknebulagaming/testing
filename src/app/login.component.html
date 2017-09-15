@@ -1,21 +1,76 @@
-<div class='floor' (mousemove)='mouseMove($event)'>
-<div class='desk' [ngStyle]="shadowStyle">
-    <div class='left'>
-        <p>Hello</p></div>
-    <div class='right'>
-        <p>login here</p></div>
-</div>
+<div class='floor'></div>
+<div *ngIf='!rolling'  (mousemove)='mouseMove($event)' >
+
+    <div class='desk' [ngStyle]="shadowStyle" *ngIf  ='!test'>
+        <div class='left'>
+                <div class='welcome'>
+                        <h1>Welcome</h1>
+                        <p>My name is <span>Spencer J Richardson</span>. I am a web developer
+                            in the <span>Baltimore MD</span> area. I built this site from scratch using Angular4, take a look around!</p> 
+                    </div>
+            <img class='logo' src='./assets/altlogo2.svg'>
+
+
+        </div>
+        <div class='right'>
+                        <div class='lighter'>
+                        <table class="example-full-width" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <md-input-container class='wide'>
+                                        <input mdInput placeholder="username">
+                                    </md-input-container>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <md-input-container class='wide' >
+                                        <input mdInput placeholder="password" [(ngModel)]='password'>
+                                    </md-input-container>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                        <button class='biggerButton' (click)='login()' md-button color="primary"> Login</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+            <img style='max-height:45%;margin:auto;opacity:.1;float:left;' src='./assets/Work-in-progress.svg'>
+        </div>
+    </div>
+
+
+    <div class='centerDesk' *ngIf = 'test'>
+            <md-card class="example-card" *ngFor='let card of cards'>
+                    <md-card-header>
+                      <div md-card-avatar class="example-header-image"></div>
+                      <md-card-title>Shiba Inu</md-card-title>
+                      <md-card-subtitle>Dog Breed</md-card-subtitle>
+                    </md-card-header>
+                    <img md-card-image src="./assets/altlogo.svg" >
+                    <md-card-content>
+                      <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.
+                      </p>
+                    </md-card-content>
+                    <md-card-actions>
+                      <button md-button>LIKE</button>
+                      <button md-button>SHARE</button>
+                    </md-card-actions>
+                  </md-card>
+                </div>
 </div>
 
-<script>
-  var cursorX;
-var cursorY;
-document.onmousemove = function(e){
-    cursorX = e.pageX;
-    cursorY = e.pageY;
-}
-setInterval(checkCursor, 1000);
-function checkCursor(){
-    alert("Cursor at: " + cursorX + ", " + cursorY);
-}
-</script>
+<div *ngIf='rolling' >
+        <youtube></youtube>        
+</div>
+
+   
+
+
+
+<img class='watermark' src='./assets/altlogo3.svg' (click)='reset()'>

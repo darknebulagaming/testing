@@ -1,9 +1,179 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300');
+
+@font-face {
+  font-family: 'adequateextra_light';
+  src: url('./assets/fonts/adequate-extralight-webfont.eot');
+  src: url('./assets/fonts/adequate-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/adequate-extralight-webfont.ttf') format('truetype'),
+       url('./assets/fonts/adequate-extralight-webfont.svg#adequateextra_light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html{
   min-height:100%;/* make sure it is at least as tall as the viewport */
   position:relative;
+  font-family: 'adequateextra_light';
 }
 body{
   height:100%; /* force the BODY element to match the height of the HTML element */
   margin: 0;
 }
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.example-card {
+  width: 400px;
+}
+
+.example-header-image {
+  background-image: url('./assets/face.svg');
+  background-size: cover;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-tooltip-host {
+  display: inline-flex;
+  align-items: center;
+  margin: 50px;
+}
+
+.example-select {
+  margin: 0 10px;
+}
+.example-full-width {
+  width: 100%;
+}
+
+.mat-card{
+  background: #C9D6FF;
+  background: -webkit-linear-gradient(to bottom, #E2E2E2, #C9D6FF);
+  background: linear-gradient(to bottom, #E2E2E2, #C9D6FF);
+}
+.mat-card-image{
+  margin: auto !important;
+}
+
+/* When the input is not focused */
+input *{
+  color: red;
+}
+
+/* When the input is focused */
+.mdInput.md-input-focused label {
+  color: blue;
+}
+
+.example-card {
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.example-header-image {
+  background-image: url('./assets/face.svg');
+  background-size: cover;
+}
+
+
+@media screen and (max-width: 575px) {
+	.centerDesk{
+    margin:auto;
+  }
+  
+  .desk{
+    position:relative;
+    margin:auto;
+    background-color: blue;
+  }
+  
+  .left{
+    float: left;
+    padding:0 1% 0 1%;
+  width:98%;
+  height:100%;
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+  
+  }
+  
+  .right{
+    text-align: right;
+    padding:0 1% 0 1%;
+    width:98%;
+    float: right;
+    height:100%;
+    background: #00d2ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  }
+    .size-desk {
+        display:none !important;
+    }
+ }
+ @media screen and (max-width: 768px) {
+  
+  
+    .size-desk-m {
+        display:none !important;
+    }   
+ }
+@media screen and (min-width: 576px) {
+
+  .centerDesk{
+    padding:0 0 0 40%;
+    margin:auto;
+  }
+  
+  .desk{
+    position:relative;
+    top:10vh;
+    width: 60vw;
+    height: 80vh;
+    margin:auto;
+    background-color: blue;
+  }
+  
+  .left{
+    float: left;
+    padding:0 1% 0 1%;
+  width:48%;
+  height:100%;
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+  
+  }
+  
+  .right{
+    text-align: right;
+    padding:0 1% 0 1%;
+    width:48%;
+    float: right;
+    height:100%;
+    background: #00d2ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  }
+  
+    .size-mob {
+        display:none !important;
+    }
+
+ }
+@media screen and (min-width: 769px) {
+
+
+    .size-mob-m {
+        display:none !important;
+    } 
+ }
+
